@@ -73,7 +73,6 @@ const getDishesDone = () => {
 }
 
 const waitForLaundryDone = async () => {
-    try{
         console.log("je commence la lessive")
         const result = await getLaundryDone()
         console.log(result)
@@ -81,10 +80,6 @@ const waitForLaundryDone = async () => {
         const resultDishes = await getDishesDone()
         console.log(resultDishes)
         console.log("J’ai fini de faire le ménage")
-    }catch (e) {
-        console.log("je n'ai pas fait la lessive")
-        console.log("je n'ai pas fait la vaisselle")
-    }
 }
 
 waitForLaundryDone()
